@@ -1,4 +1,5 @@
 
+
 <html>
 <body>
 
@@ -8,65 +9,34 @@
 <script>
 function openWindows() {
 	var correct_card = Math.floor(Math.random() * 3) + 1;
-    card1pos = Math.floor(Math.random() * 3) + 1;
-    if (card1pos == 1) {
-    	card2pos = 2;
-        card3pos= 3;
-    }
-    if (card1pos == 2) {
-    	card2pos = 1;
-        card3pos= 3;
-        }
-    if (card1pos == 3) {
-    	card2pos = 2;
-        card3pos= 1;
-    }
-    card1 = window.open("", "", "left=100,top=100,width=200,height=150");
-    card1.resizeTo(200, 350);
     if (correct_card == 1) {
-     card1.document.write('<img src="http://mathfront.org/cardgame/queen.png" alt="" style="width: 100%; height: auto; display: block;">');
+card1 = window.open("http://mathfront.org/cardgame/blankcardqueen.html", "_blank", "left=100,top=200,width=200,height=150");
+        card1.resizeTo(200, 350);
 } else {
-	
+	card1 = window.open("http://mathfront.org/cardgame/blankcardjack1.html", "_blank", "left=100,top=200,width=200,height=150");
+        card1.resizeTo(200, 350);
+    }
+    if (correct_card == 2) {
+     card2 = window.open("http://mathfront.org/cardgame/blankcardqueen.html", "_blank", "left=350,top=200,width=200,height=150");
+        card2.resizeTo(200, 350);
+} else {
+	card2 = window.open("http://mathfront.org/cardgame/blankcardjack2.html", "_blank", "left=350,top=200,width=200,height=150");
+        card2.resizeTo(200, 350);
 }
-    card2 = window.open("", "", "left=350,top=100,width=200,height=150");
-    card2.resizeTo(200, 300);
-    card3 = window.open("", "", "left=600,top=100,width=200,height=150");
-    card3.resizeTo(200, 300);
+    if (correct_card == 3) {
+card3 = window.open("http://mathfront.org/cardgame/blankcardqueen.html", "_blank", "left=600,top=200,width=200,height=150");
+        card3.resizeTo(200, 350);
+} else {
+	card3 = window.open("http://mathfront.org/cardgame/blankcardjack3.html", "_blank", "left=600,top=200,width=200,height=150");
+        card3.resizeTo(200, 350);
+    
+}
 }
 animatewindow1;
 function closeWindows() {
 	card1.close();
     card2.close();
     card3.close();
-}
-function animatewindow1() { 
-  card1.focus();
-  if (card1pos == 1) {
-  var pos = 0;
-  var id = setInterval(frame, 0);
-  function frame() {
-    if (pos == 0) {
-      clearInterval(id);
-      animateWindow2();
-    } else {
-      pos++; 
-      myWindow.moveBy(2, 0);
-    }
-  }
-  }
-  if (card1pos == 2) {
-  var pos = 0;
-  var id = setInterval(frame, 0);
-  function frame() {
-    if (pos == 175) {
-      clearInterval(id);
-      animateWindow2();
-    } else {
-      pos++; 
-      myWindow.moveBy(2, 0);
-    }
-  }
-  }
 }
 </script>
 </body>
