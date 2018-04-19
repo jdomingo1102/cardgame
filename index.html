@@ -10,6 +10,7 @@
 
 <button id="openbtn" onclick="openWindows()">Open Windows</button>
 <button id="closbtn" onclick="closeWindows()">Close Windows</button>
+	<button id="resetbtn" onclick="resetBtn()">Try Again</button>
 
 <script>
 function openWindows() {
@@ -37,11 +38,14 @@ card3 = window.open("http://mathfront.org/cardgame/blankcardqueen.html", "_blank
     
 }
 }
-animatewindow1;
 function closeWindows() {
 	card1.close();
     card2.close();
     card3.close();
+}
+	function resetBtn() {
+	closeWindows();
+    openWindows();
 }
 </script>
 </body>
